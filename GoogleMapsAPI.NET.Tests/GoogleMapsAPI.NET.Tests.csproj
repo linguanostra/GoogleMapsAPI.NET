@@ -1,0 +1,132 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{1D763A6C-CCB2-43A1-9261-6B27230B7F8E}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>GoogleMapsAPI.NET.Tests</RootNamespace>
+    <AssemblyName>GoogleMapsAPI.NET.Tests</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="FluentAssertions, Version=4.3.1.0, Culture=neutral, PublicKeyToken=33f2691a05b67b6a, processorArchitecture=MSIL">
+      <HintPath>..\packages\FluentAssertions.4.3.1\lib\net45\FluentAssertions.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="FluentAssertions.Core, Version=4.3.1.0, Culture=neutral, PublicKeyToken=33f2691a05b67b6a, processorArchitecture=MSIL">
+      <HintPath>..\packages\FluentAssertions.4.3.1\lib\net45\FluentAssertions.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework, Version=10.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Rhino.Mocks, Version=3.6.0.0, Culture=neutral, PublicKeyToken=0b3305902db7183f, processorArchitecture=MSIL">
+      <HintPath>..\packages\RhinoMocks.3.6.1\lib\net\Rhino.Mocks.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="API\Client\ClientAPITests.cs" />
+    <Compile Include="API\Common\APITests.cs" />
+    <Compile Include="API\Conversion\ConversionTests.cs" />
+    <Compile Include="API\Directions\DirectionsAPITests.cs" />
+    <Compile Include="API\DistanceMatrix\DistanceMatrixAPITests.cs" />
+    <Compile Include="API\Elevation\ElevationAPITests.cs" />
+    <Compile Include="API\Extensions\ClientAPITestsExtensions.cs" />
+    <Compile Include="API\Extensions\Results\ClientAPIMultipleWebQueryMocks.cs" />
+    <Compile Include="API\Extensions\Results\ClientAPIWebQueryMocks.cs" />
+    <Compile Include="API\Extensions\WebRequestUtilityTestsExtensions.cs" />
+    <Compile Include="API\Geocoding\GeocodingAPITests.cs" />
+    <Compile Include="API\Places\PlacesAPITests.cs" />
+    <Compile Include="API\Roads\RoadsAPITests.cs" />
+    <Compile Include="API\StreetViewImage\StreetViewImageAPITests.cs" />
+    <Compile Include="API\TimeZone\TimeZoneAPITests.cs" />
+    <Compile Include="API\Utils\ClientAPIMockUtils.cs" />
+    <Compile Include="API\Utils\MockConfig\Images\MockImageWebResponseConfig.cs" />
+    <Compile Include="API\Utils\MockConfig\MockInvalidRequestResultWebResponseConfig.cs" />
+    <Compile Include="API\Utils\MockConfig\Images\MockPlaceImageWebResponseConfig.cs" />
+    <Compile Include="API\Utils\MockConfig\Images\MockStreetViewImageWebResponseConfig.cs" />
+    <Compile Include="API\Utils\MockConfig\MockValidPlacesSearchResultWebResponseConfig.cs" />
+    <Compile Include="API\Utils\MockConfig\MockValidResultsWebResponseConfig.cs" />
+    <Compile Include="API\Utils\MockConfig\MockErrorResultWebResponseConfig.cs" />
+    <Compile Include="API\Utils\MockConfig\MockInternalServerErrorResultWebResponseConfig.cs" />
+    <Compile Include="API\Utils\MockConfig\MockNotFoundWebResponseConfig.cs" />
+    <Compile Include="API\Utils\MockConfig\MockResultWebResponseConfig.cs" />
+    <Compile Include="API\Utils\MockConfig\MockValidRoutesWebResponseConfig.cs" />
+    <Compile Include="API\Utils\MockConfig\MockValidRowsWebResponseConfig.cs" />
+    <Compile Include="API\Utils\MockConfig\MockValidSnappedPointsWebResponseConfig.cs" />
+    <Compile Include="API\Utils\MockConfig\MockValidSpeedLimitsWebResponseConfig.cs" />
+    <Compile Include="API\Utils\MockConfig\MockWebResponseConfig.cs" />
+    <Compile Include="Config\TestsStaticConfiguration.cs" />
+    <Compile Include="Initialization\ClientLibraryTestsInitializer.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\GoogleMapsAPI.NET.Core\GoogleMapsAPI.NET.csproj">
+      <Project>{1b52f7c0-cb4a-437a-bea3-62c66582e2c7}</Project>
+      <Name>GoogleMapsAPI.NET</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{82A7F48D-3B50-4B1E-B82E-3ADA8210C358}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\StreetView.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PlacePhoto.jpeg" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

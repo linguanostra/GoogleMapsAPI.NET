@@ -1,0 +1,201 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{1B52F7C0-CB4A-437A-BEA3-62C66582E2C7}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>GoogleMapsAPI.NET</RootNamespace>
+    <AssemblyName>GoogleMapsAPI.NET</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ImageProcessor, Version=2.3.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\ImageProcessor.2.3.3.0\lib\net45\ImageProcessor.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=8.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.8.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="API\Common\Attributes\GoogleAPIUndocumentedAttribute.cs" />
+    <Compile Include="API\Common\Components\Duration.cs" />
+    <Compile Include="API\Common\Components\Locations\AddressLocation.cs" />
+    <Compile Include="API\Common\Components\Locations\Common\Interfaces\ILocation.cs" />
+    <Compile Include="API\Common\Components\Locations\GeoCoordinatesLocation.cs" />
+    <Compile Include="API\Common\Components\Locations\Common\Location.cs" />
+    <Compile Include="API\Common\Components\Locations\Interfaces\IAddressLocation.cs" />
+    <Compile Include="API\Common\Components\Locations\Interfaces\Combined\IAddressOrGeoCoordinatesLocation.cs" />
+    <Compile Include="API\Common\Components\Locations\Interfaces\IGeoCoordinatesLocation.cs" />
+    <Compile Include="API\Common\Components\Locations\Interfaces\IPlaceLocation.cs" />
+    <Compile Include="API\Common\Components\Locations\PlaceLocation.cs" />
+    <Compile Include="API\Common\Components\Distance.cs" />
+    <Compile Include="API\Common\MapsAPI.cs" />
+    <Compile Include="API\Common\Requests\APIRequestParams.cs" />
+    <Compile Include="API\Common\Responses\APIMultipleResultsResponse.cs" />
+    <Compile Include="API\Common\Responses\APISingleResultResponse.cs" />
+    <Compile Include="API\Common\Responses\APIV1Response.cs" />
+    <Compile Include="API\Common\Responses\ContentBinaryResponse.cs" />
+    <Compile Include="API\Common\Responses\ContentImageResponse.cs" />
+    <Compile Include="API\Common\Responses\ContentResponse.cs" />
+    <Compile Include="API\Common\Responses\ContentTextResponse.cs" />
+    <Compile Include="API\Common\Responses\Response.cs" />
+    <Compile Include="API\Directions\DirectionsAPI.cs" />
+    <Compile Include="API\Directions\Enums\AvoidFeaturesEnum.cs" />
+    <Compile Include="API\Directions\Enums\TrafficModelEnum.cs" />
+    <Compile Include="API\Directions\Enums\TransitModeEnum.cs" />
+    <Compile Include="API\Directions\Enums\TransitRoutingPreferenceEnum.cs" />
+    <Compile Include="API\Directions\Enums\TransportationModeEnum.cs" />
+    <Compile Include="API\Directions\Enums\UnitSystemEnum.cs" />
+    <Compile Include="API\Directions\Enums\GeocoderStatusEnum.cs" />
+    <Compile Include="API\Directions\Components\Fare.cs" />
+    <Compile Include="API\Directions\Components\GeocodedWaypoint.cs" />
+    <Compile Include="API\Common\Components\EncodedPolyline.cs" />
+    <Compile Include="API\Directions\Components\RouteLeg.cs" />
+    <Compile Include="API\Directions\Components\RouteLegStep.cs" />
+    <Compile Include="API\Directions\Components\TransitDetails.cs" />
+    <Compile Include="API\Directions\Components\TransitStopStation.cs" />
+    <Compile Include="API\Directions\Responses\GetDirectionsResponse.cs" />
+    <Compile Include="API\Directions\Results\GetDirectionsRouteResult.cs" />
+    <Compile Include="API\DistanceMatrix\DistanceMatrixAPI.cs" />
+    <Compile Include="API\DistanceMatrix\Components\DistanceMatrixRow.cs" />
+    <Compile Include="API\DistanceMatrix\Components\DistanceMatrixRowElement.cs" />
+    <Compile Include="API\DistanceMatrix\Responses\GetDistanceMatrixResponse.cs" />
+    <Compile Include="API\Elevation\ElevationAPI.cs" />
+    <Compile Include="API\Elevation\Responses\GetElevationResponse.cs" />
+    <Compile Include="API\Elevation\Results\GetElevationResult.cs" />
+    <Compile Include="API\Geocoding\GeocodingAPI.cs" />
+    <Compile Include="API\Geocoding\Enums\AddressTypeEnum.cs" />
+    <Compile Include="API\Geocoding\Responses\ReverseGeocodeResultResponse.cs" />
+    <Compile Include="API\Geocoding\Results\ReverseGeocodeResult.cs" />
+    <Compile Include="API\Geometry\Extensions\GeometryExtensions.cs" />
+    <Compile Include="API\Geometry\GeometryAPI.cs" />
+    <Compile Include="API\Geometry\Types\SphericalGeometry.cs" />
+    <Compile Include="API\Places\Components\PlaceAlternativeId.cs" />
+    <Compile Include="API\Places\Components\PlaceAspectRating.cs" />
+    <Compile Include="API\Places\Components\PlaceDetailsOpeningHours.cs" />
+    <Compile Include="API\Places\Components\PlaceDetailsGeometry.cs" />
+    <Compile Include="API\Places\Components\PlaceGeometry.cs" />
+    <Compile Include="API\Places\Components\PlaceOpeningPeriodDayTime.cs" />
+    <Compile Include="API\Places\Components\PlaceOpeningPeriods.cs" />
+    <Compile Include="API\Places\Components\PlacePrediction.cs" />
+    <Compile Include="API\Places\Components\PlacePredictionMatchedSubstring.cs" />
+    <Compile Include="API\Places\Components\PlacePredictionTerm.cs" />
+    <Compile Include="API\Places\Components\PlaceReview.cs" />
+    <Compile Include="API\Places\Components\Premium\PlacePremiumAspectRating.cs" />
+    <Compile Include="API\Places\Responses\PlaceAutocompleteResponse.cs" />
+    <Compile Include="API\Places\Responses\PlacePhotoResponse.cs" />
+    <Compile Include="API\Places\Responses\PlaceQueryAutoCompleteResponse.cs" />
+    <Compile Include="API\Places\Results\PlaceDetailsResult.cs" />
+    <Compile Include="API\Places\Components\PlaceOpeningHours.cs" />
+    <Compile Include="API\Places\Results\PlaceRadarSearchResult.cs" />
+    <Compile Include="API\Places\Results\PlaceSearchResult.cs" />
+    <Compile Include="API\Places\Components\PlacePhoto.cs" />
+    <Compile Include="API\Places\Enums\AspectRatingTypeEnum.cs" />
+    <Compile Include="API\Places\Enums\PlaceDetailsExtensionEnum.cs" />
+    <Compile Include="API\Places\Enums\PlacePriceLevelEnum.cs" />
+    <Compile Include="API\Places\Enums\PlaceScopeEnum.cs" />
+    <Compile Include="API\Places\Enums\PlaceResultTypeEnum.cs" />
+    <Compile Include="API\Places\Enums\PlaceSearchTypeEnum.cs" />
+    <Compile Include="API\Places\Enums\PlaceRankByEnum.cs" />
+    <Compile Include="API\Places\Components\PlaceGeometryAccessPoint.cs" />
+    <Compile Include="API\Places\Responses\Common\PlaceBaseSearchResponse.cs" />
+    <Compile Include="API\Places\Responses\PlaceDetailsResponse.cs" />
+    <Compile Include="API\Places\Responses\PlaceRadarSearchResponse.cs" />
+    <Compile Include="API\Places\Responses\PlaceSearchResponse.cs" />
+    <Compile Include="API\Places\PlacesAPI.cs" />
+    <Compile Include="API\Roads\Components\SnappedPoint.cs" />
+    <Compile Include="API\Roads\Components\SnappedPointGeoCoordinatesLocation.cs" />
+    <Compile Include="API\Roads\Responses\SnapToRoadsResponse.cs" />
+    <Compile Include="API\Roads\Components\SpeedLimit.cs" />
+    <Compile Include="API\Roads\Enums\SpeedUnitEnum.cs" />
+    <Compile Include="API\Roads\Responses\SpeedLimitsResponse.cs" />
+    <Compile Include="API\Roads\RoadsAPI.cs" />
+    <Compile Include="API\StreetViewImage\Responses\StreetViewResponse.cs" />
+    <Compile Include="API\StreetViewImage\StreetViewImageAPI.cs" />
+    <Compile Include="API\TimeZone\Responses\GetTimeZoneResponse.cs" />
+    <Compile Include="API\TimeZone\TimeZoneAPI.cs" />
+    <Compile Include="Exceptions\APIErrorException.cs" />
+    <Compile Include="Exceptions\HttpResponseException.cs" />
+    <Compile Include="API\Client\Interfaces\IMapsAPIClient.cs" />
+    <Compile Include="API\Client\MapsAPIClient.cs" />
+    <Compile Include="Extensions\DoubleExtensions.cs" />
+    <Compile Include="Extensions\ImageExtensions.cs" />
+    <Compile Include="Utils\Converter.cs" />
+    <Compile Include="Exceptions\APIKeyInvalidException.cs" />
+    <Compile Include="Exceptions\APICredentialsNotSpecifiedException.cs" />
+    <Compile Include="Exceptions\RetriableRequestException.cs" />
+    <Compile Include="Exceptions\TimeoutException.cs" />
+    <Compile Include="Exceptions\TransportErrorException.cs" />
+    <Compile Include="API\Geocoding\Components\Address.cs" />
+    <Compile Include="API\Common\Responses\APIResponse.cs" />
+    <Compile Include="API\Geocoding\Responses\GeocodeResponse.cs" />
+    <Compile Include="API\Geocoding\Results\GeocodeResult.cs" />
+    <Compile Include="API\Geocoding\Components\GeocodingGeometry.cs" />
+    <Compile Include="API\Geocoding\Enums\GeometryLocationType.cs" />
+    <Compile Include="API\Common\Components\ViewportBoundingBox.cs" />
+    <Compile Include="Extensions\DateTimeExtensions.cs" />
+    <Compile Include="Extensions\EnumExtensions.cs" />
+    <Compile Include="Extensions\TypeExtensions.cs" />
+    <Compile Include="Common\Globals.cs" />
+    <Compile Include="API\Client\MapsAPIClientConfig.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Requests\ComponentsFilter.cs" />
+    <Compile Include="Requests\Helpers\HttpEncoder.cs" />
+    <Compile Include="Requests\Helpers\HttpUtility.cs" />
+    <Compile Include="Requests\Interfaces\IWebRequestUtility.cs" />
+    <Compile Include="Requests\QueryParams.cs" />
+    <Compile Include="Requests\RequestConfig.cs" />
+    <Compile Include="Requests\RequestHeaders.cs" />
+    <Compile Include="Requests\WebRequestUtility.cs" />
+    <Compile Include="Utils\Base64Utils.cs" />
+    <Compile Include="Utils\Serialization\JsonEpochDateTimeConverter.cs" />
+    <Compile Include="Web\Extensions\HttpWebResponseExtensions.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

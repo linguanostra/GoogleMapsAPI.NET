@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.23107.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GoogleMapsAPI.NET", "GoogleMapsAPI.NET.Core\GoogleMapsAPI.NET.csproj", "{1B52F7C0-CB4A-437A-BEA3-62C66582E2C7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GoogleMapsAPI.NET.App", "GoogleMapsAPI.NET.App\GoogleMapsAPI.NET.App.csproj", "{43C011CF-1557-4CFF-B224-1433AC3B783F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GoogleMapsAPI.NET.Tests", "GoogleMapsAPI.NET.Tests\GoogleMapsAPI.NET.Tests.csproj", "{1D763A6C-CCB2-43A1-9261-6B27230B7F8E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1B52F7C0-CB4A-437A-BEA3-62C66582E2C7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1B52F7C0-CB4A-437A-BEA3-62C66582E2C7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1B52F7C0-CB4A-437A-BEA3-62C66582E2C7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1B52F7C0-CB4A-437A-BEA3-62C66582E2C7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{43C011CF-1557-4CFF-B224-1433AC3B783F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{43C011CF-1557-4CFF-B224-1433AC3B783F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{43C011CF-1557-4CFF-B224-1433AC3B783F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{43C011CF-1557-4CFF-B224-1433AC3B783F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1D763A6C-CCB2-43A1-9261-6B27230B7F8E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1D763A6C-CCB2-43A1-9261-6B27230B7F8E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1D763A6C-CCB2-43A1-9261-6B27230B7F8E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1D763A6C-CCB2-43A1-9261-6B27230B7F8E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
