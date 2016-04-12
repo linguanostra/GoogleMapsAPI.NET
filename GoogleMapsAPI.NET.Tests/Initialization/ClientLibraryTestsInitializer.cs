@@ -6,7 +6,6 @@ namespace GoogleMapsAPI.NET.Tests.Initialization
     /// <summary>
     /// Client library tests initializer
     /// </summary>
-    [TestClass]
     public class ClientLibraryTestsInitializer
     {
 

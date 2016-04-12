@@ -21,6 +21,13 @@
 
         #endregion
 
+        #region Constants
+
+        /// <summary>
+        /// The unreserved URI characters (RFC 3986)
+        /// </summary>
+        public const string UnreservedSet = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789-._~";
+
         /// <summary>
         /// Default Google MAPS API base url
         /// </summary>
@@ -29,6 +36,9 @@
         /// <summary>
         /// Retriable status codes
         /// </summary>
-        public static int[] RetriableStatuses = {500, 503, 504};
+        public static int[] RetriableStatuses = { 500, 503, 504 };
+
+        #endregion
+
     }
 }
