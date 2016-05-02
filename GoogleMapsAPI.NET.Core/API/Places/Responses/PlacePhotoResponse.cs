@@ -6,7 +6,7 @@ namespace GoogleMapsAPI.NET.API.Places.Responses
     /// <summary>
     /// Place photo response
     /// </summary>
-    public class PlacePhotoResponse : ContentImageResponse
+    public class PlacePhotoResponse : ContentBinaryResponse
     {
 
         #region Constructors

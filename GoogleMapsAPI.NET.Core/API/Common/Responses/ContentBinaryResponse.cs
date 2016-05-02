@@ -1,3 +1,5 @@
+using System.IO;
+
 namespace GoogleMapsAPI.NET.API.Common.Responses
 {
     /// <summary>
@@ -28,6 +30,22 @@ namespace GoogleMapsAPI.NET.API.Common.Responses
         }
 
         #endregion
+
+        #region Overrides
+
+        /// <summary>
+        /// Save content
+        /// </summary>
+        /// <param name="path">Path</param>
+        public override void SaveContent(string path)
+        {
+
+            File.WriteAllBytes(path, Content);
+
+        }
+
+        #endregion
+
     }
 
 }

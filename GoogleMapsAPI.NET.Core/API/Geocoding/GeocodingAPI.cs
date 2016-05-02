@@ -83,7 +83,25 @@ namespace GoogleMapsAPI.NET.API.Geocoding
             return response;
 
         }
-       
+
+        /// <summary>
+        /// Reverse geocoding is the process of converting geographic coordinates into a
+        /// human-readable address.
+        /// </summary>
+        /// <param name="latitude">The latitude for which you wish to obtain the closest, human-readable address.</param>
+        /// <param name="longitude">The longitude for which you wish to obtain the closest, human-readable address.</param>
+        /// <param name="language">The language in which to return results.</param>
+        /// <param name="addressType">One or more address types to restrict results to.</param>
+        /// <param name="locationType">One or more location types to restrict results to.</param>
+        /// <returns>Reverse geocoding results</returns>
+        public ReverseGeocodeResultResponse ReverseGeocode(double latitude, double longitude, string language = null,
+            AddressTypeEnum? addressType = null, GeometryLocationType? locationType = null)
+        {
+
+            return ReverseGeocode(new GeoCoordinatesLocation(latitude, longitude), language, addressType, locationType);
+
+        }
+
         /// <summary>
         /// Reverse geocoding is the process of converting geographic coordinates into a
         /// human-readable address.

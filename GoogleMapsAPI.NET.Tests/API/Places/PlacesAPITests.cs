@@ -253,11 +253,8 @@ namespace GoogleMapsAPI.NET.Tests.API.Places
                     "A6QbGh87GB3sscrHRIQiG2RrmU_jF4tENr9wGS_YxoUSSDrYjWmr" + 
                     "NfeEHSGSc3FyhNLlBU&maxwidth=400");
 
-                // Image
-                result.ImageFileExtension.Should().Be("jpeg");
-                result.ImageFormat.Should().Be(ImageFormat.Jpeg);
-                result.Image.Width.Should().Be(400);
-                result.Image.Height.Should().Be(300);                
+                // Image data
+                result.Content.Should().NotBeNullOrEmpty();
 
             }
 

@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>GoogleMapsAPI.NET</id>
+    <version>1.0.0</version>
+    <authors>Patrick Cloutier (Wasabi Solutions)</authors>
+    <owners>Patrick Cloutier (Wasabi Solutions)</owners>
+    <licenseUrl>https://github.com/linguanostra/GoogleMapsAPI.NET/blob/master/LICENSE</licenseUrl>
+    <projectUrl>https://github.com/linguanostra/GoogleMapsAPI.NET</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>.NET client library for Google Maps API Web Services</description>
+    <releaseNotes>Initial release.</releaseNotes>
+    <copyright>Copyright 2016 Patrick Cloutier</copyright>
+    <tags>Google Maps API Web Services .NET Library</tags>
+    <dependencies>
+		<group>			
+		  <dependency id="Newtonsoft.Json" version="8.0.3" />		
+		</group>
+    </dependencies>
+	<references>
+		<reference file="GoogleMapsAPI.NET.dll" />
+	</references>
+  </metadata>
+  	<files>	
+		<file src="..\bin\Release\net40\GoogleMapsAPI.NET.dll" target="lib\net40\GoogleMapsAPI.NET.dll" />
+		<file src="..\bin\Release\net40\GoogleMapsAPI.NET.pdb" target="lib\net40\GoogleMapsAPI.NET.pdb" />
+		<file src="..\bin\Release\net40\GoogleMapsAPI.NET.xml" target="lib\net40\GoogleMapsAPI.NET.xml" />
+	</files>
+
+</package>

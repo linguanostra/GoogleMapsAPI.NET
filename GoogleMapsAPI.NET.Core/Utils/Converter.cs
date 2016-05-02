@@ -158,7 +158,6 @@ namespace GoogleMapsAPI.NET.Utils
         /// <summary>
         /// Join enum list with separator
         /// </summary>
-        /// <typeparam name="TEnum">Enum type</typeparam>
         /// <param name="values">Values</param>
         /// <param name="separator">Separator</param>
         /// <returns>Result string</returns>

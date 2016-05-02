@@ -14,12 +14,12 @@ namespace GoogleMapsAPI.NET.API.Directions.Enums
         [EnumMember(Value = "driving")]
         Driving,
         /// <summary>
-        /// Via pedestrian paths & sidewalks (where available).
+        /// Via pedestrian paths and sidewalks (where available).
         /// </summary>
         [EnumMember(Value = "walking")]
         Walking,
         /// <summary>
-        /// Bicycle paths & preferred streets (where available).
+        /// Bicycle paths and preferred streets (where available).
         /// </summary>
         [EnumMember(Value = "bicycling")]
         Bicycling,

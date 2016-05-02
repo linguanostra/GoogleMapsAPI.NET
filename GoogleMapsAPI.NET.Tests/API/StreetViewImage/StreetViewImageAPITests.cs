@@ -45,11 +45,8 @@ namespace GoogleMapsAPI.NET.Tests.API.StreetViewImage
                     "location=46.414382%2C10.013988&size=600x300" +
                     "&heading=151.78&pitch=-0.76");
 
-                // Image
-                result.ImageFileExtension.Should().Be("jpeg");
-                result.ImageFormat.Should().Be(ImageFormat.Jpeg);
-                result.Image.Width.Should().Be(600);
-                result.Image.Height.Should().Be(300);                
+                // Image data
+                result.Content.Should().NotBeNullOrEmpty();
 
             }
 

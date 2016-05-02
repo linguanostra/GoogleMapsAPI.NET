@@ -6,7 +6,7 @@ namespace GoogleMapsAPI.NET.API.StreetViewImage.Responses
     /// <summary>
     /// Street view response
     /// </summary>
-    public class StreetViewResponse : ContentImageResponse
+    public class StreetViewResponse : ContentBinaryResponse
     {
 
         #region Constructors

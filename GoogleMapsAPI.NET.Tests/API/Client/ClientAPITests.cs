@@ -57,7 +57,7 @@ namespace GoogleMapsAPI.NET.Tests.API.Client
         {
 
             // Get API client
-            using (var client = GetAPIClient(null, null))
+            using (var client = GetAPIClient(null))
             {
                 
                 // Get directions
