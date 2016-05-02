@@ -503,10 +503,10 @@ namespace GoogleMapsAPI.NET.API.Client
             // TODO: Fix that, seems it won't always work
             if (SentTimes.Count == ClientConfig.QueriesPerSecond)
             {
-                var elapsed_since_earliest = DateTime.Now - SentTimes.ElementAt(0);
-                if (elapsed_since_earliest.Seconds < 1)
+                var elapsedSinceEarliest = DateTime.Now - SentTimes.ElementAt(0);
+                if (elapsedSinceEarliest.Seconds < 1)
                 {
-                    Thread.Sleep(1000 - elapsed_since_earliest.Milliseconds);
+                    Thread.Sleep(1000 - elapsedSinceEarliest.Milliseconds);
                 }
             }
 
@@ -703,12 +703,9 @@ namespace GoogleMapsAPI.NET.API.Client
         /// https://github.com/googlemaps/google-maps-services-python/issues/72
         /// </summary>
         /// <param name="uri">Uri</param>
-        /// <returns></returns>
+        /// <returns>Result</returns>
         private static string UnquoteUnreserved(string uri)
         {
-
-            // The unreserved URI characters (RFC 3986)
-            const string UNRESERVED_SET = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789-._~";
 
             // Validate uri
             if (uri == null) return string.Empty;
@@ -726,7 +723,7 @@ namespace GoogleMapsAPI.NET.API.Client
                 if (matchResults.Success)
                 {
                     var charValue = (char)Convert.ToInt32(matchResults.Groups[1].Value, 16);
-                    if (UNRESERVED_SET.Contains(charValue))
+                    if (Globals.UnreservedSet.Contains(charValue))
                     {
                         parts[i] = charValue + matchResults.Groups[2].Value;
                     }

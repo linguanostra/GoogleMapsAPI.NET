@@ -156,7 +156,6 @@
     <Compile Include="Exceptions\APIKeyInvalidException.cs" />
     <Compile Include="Exceptions\APICredentialsNotSpecifiedException.cs" />
     <Compile Include="Exceptions\RetriableRequestException.cs" />
-    <Compile Include="Exceptions\TimeoutException.cs" />
     <Compile Include="Exceptions\TransportErrorException.cs" />
     <Compile Include="API\Geocoding\Components\Address.cs" />
     <Compile Include="API\Common\Responses\APIResponse.cs" />
