@@ -80,7 +80,7 @@ Your API key should be 40 characters long, and begin with `AIza`.
 
 ## Developer Documentation
 
-View the [reference documentation](https://googlemaps.github.io/google-maps-services-python/docs/2.4.3/)
+View the [reference documentation](http://linguanostra.github.io/GoogleMapsAPI_NET/docs/1_0_0/index.html)
 
 Additional documentation for the included web services is available at
 https://developers.google.com/maps/.
@@ -117,7 +117,7 @@ var directionsResult = client.Directions.GetDirections("Sydney Town Hall",
 
 ```
 
-For more usage examples, check out [the tests](test/).
+For more usage examples, check out [the tests](GoogleMapsAPI.NET.Tests/).
 
 ## Features
 
